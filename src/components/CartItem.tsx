@@ -33,7 +33,7 @@ const CartItem = ({
         </p>
       </div>
       <button
-        className="border-2 w-[5%] h-5 mr-[5%] text-xs border-blue-500 text-blue-500 rounded-[100%] transition duration-300ms hover:text-white hover:bg-blue-500"
+        className="border-2 w-[7%] h-5 mr-[5%] text-xs border-white sm:border-white md:border-white lg:border-blue-500 text-white lg:text-blue-500 rounded-[100%] transition duration-300ms lg:hover:text-white lg:hover:bg-blue-500"
         onClick={handleClick}
       >
         X
