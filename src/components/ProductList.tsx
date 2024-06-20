@@ -50,7 +50,7 @@ export const ProductList = () => {
       <Header toggleCartVisibility={toggleCartVisibility} />
       <main className="h-[95vh]">
         <div className="h-full w-screen flex">
-          <ul className="w-full sm:w-full md:w-full lg:w-[80vw] h-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 py-10 py-autos sm:pl-0 md:pl-0 lg:pl-40">
+          <ul className="w-full sm:w-full md:w-full lg:w-[80vw] h-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 py-10 py-auto sm:pl-0 md:pl-0 lg:pl-40">
             {products.map((product) => (
               <li key={product.id} className="flex justify-center align-center">
                 <Product product={product} addToCart={addToCart} />
@@ -60,7 +60,7 @@ export const ProductList = () => {
           <div
             className={`${
               isCartVisible ? "block" : "hidden"
-            } lg:block bg-blue-500 text-white sm:bg-blue-500 sm:text-white md:bg-blue-500 md:text-white lg:bg-white lg:text-blue-500 fixed top-0 right-0 w-full h-full sm:w-full md:w-full lg:w-[20vw] lg:relative lg:border-l-2 border-blue-500`}
+            } lg:block bg-white fixed top-0 right-0 w-full h-full sm:w-full md:w-full lg:w-[20vw] lg:relative lg:border-l-4 border-black`}
           >
             <Cart
               cartItems={cartItems}

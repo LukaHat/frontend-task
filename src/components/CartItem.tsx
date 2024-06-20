@@ -1,3 +1,5 @@
+import close from "../assets/images/mark-black.svg";
+
 const CartItem = ({
   id,
   img,
@@ -23,20 +25,22 @@ const CartItem = ({
     <div className="flex justify-between mb-5 w-full h-[8vh]">
       <img src={img} alt={name} className="w-[20%] h-auto" />
       <div className="flex flex-col pl-3 w-[70%]">
-        <h3>
+        <h3 className="text-black font-bold">
           {quantity}x {name}
         </h3>
-        <p>
+        <p className="flex flex-row gap-1 text-black">
           Ukupno:
-          {(price * quantity).toFixed(2)}
-          {currency.toLocaleLowerCase()}
+          <span className="text-green-500 font-bold">
+            {(price * quantity).toFixed(2)}
+            {currency.toLocaleLowerCase()}
+          </span>
         </p>
       </div>
       <button
-        className="border-2 w-[7%] h-5 mr-[5%] text-xs border-white sm:border-white md:border-white lg:border-blue-500 text-white lg:text-blue-500 rounded-[100%] transition duration-300ms lg:hover:text-white lg:hover:bg-blue-500"
+        className=" w-[7%] h-5 mr-[5%] transition ease-in-out hover:scale-110"
         onClick={handleClick}
       >
-        X
+        <img src={close} alt="close" className="w-[90%]" />
       </button>
     </div>
   );

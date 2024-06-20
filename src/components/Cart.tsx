@@ -1,7 +1,7 @@
 import { ProductInfo } from "../types";
 import CartItem from "./CartItem";
 
-import mark from "../assets/images/mark.svg";
+import mark from "../assets/images/mark-black.svg";
 
 const Cart = ({
   cartItems,
@@ -33,10 +33,13 @@ const Cart = ({
 
   return (
     <div className="flex flex-col justify-center items-center pt-10">
-      <div className="w-full flex justify-between px-10 items-center">
-        <h2 className="self-start text-2xl">Kosarica</h2>
-        <button onClick={handleClick}>
-          <img src={mark} alt="close" className="h-auto max-w-[3vh] w-[3vh]" />
+      <div className="w-full flex justify-between items-center px-10">
+        <h2 className="pb-5 text-black text-2xl">Košarica</h2>
+        <button
+          onClick={handleClick}
+          className="flex justify-center items-center h-full pb-5 lg:hidden"
+        >
+          <img src={mark} alt="close" className="h-auto w-[15%]" />
         </button>
       </div>
       <ul>
@@ -54,10 +57,12 @@ const Cart = ({
           </li>
         ))}
       </ul>
-      <hr className="w-full bg-blue-500 h-[0.2vh]" />
+      <hr className="w-full bg-black h-[0.4vh]" />
       <div className="self-start pl-10">
-        <p>Ukupan iznos:</p>
-        <p className="text-4xl">{total.toFixed(2)}kn</p>
+        <p className="text-black">Ukupan iznos:</p>
+        <p className="text-4xl text-green-500 font-bold">
+          {total.toFixed(2)}kn
+        </p>
       </div>
     </div>
   );

@@ -37,16 +37,16 @@ export const Product = ({
       <div className="flex flex-col items-center">
         <p className="py-[2.5%] px-[3%] w-full text-center">{name}</p>
         <div className="flex gap-1">
-          <p className="text-3xl text-blue-500">{beforeDecimal}</p>
+          <p className="text-3xl text-black-500">{beforeDecimal}</p>
           <p className="flex flex-col text-xs">
-            <span className="text-blue-500">{afterDecimal}</span>
+            <span className="text-black-500 font-bold">{afterDecimal}</span>
             <span>
               {currency.toLocaleLowerCase()}/{measureUnit.toLocaleLowerCase()}
             </span>
           </p>
         </div>
         <button
-          className="border-2 py-1 px-5 mt-2 bg-white text-blue-500 border-blue-500 transition duration-300 ease-in-out hover:scale-110 hover:text-white hover:bg-blue-500"
+          className="py-2 px-5 mt-2 bg-green-500 text-white rounded-md transition duration-300 ease-in-out hover:scale-110 "
           onClick={handleAdd}
         >
           Dodaj

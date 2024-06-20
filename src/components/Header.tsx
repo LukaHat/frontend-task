@@ -9,8 +9,8 @@ export const Header = ({
   };
 
   return (
-    <header className="flex w-screen px-5 justify-between items-center bg-blue-500 h-[5vh]">
-      <h1 className="text-white text-2xl">Kosarica</h1>
+    <header className="flex w-screen px-5 justify-between items-center bg-orange-500 h-[5vh]">
+      <h1 className="text-white text-2xl ">Košarica</h1>
       <button className="block sm:block md:block lg:hidden">
         <img src={basket} alt="shopping-cart" onClick={handleClick} />
       </button>
